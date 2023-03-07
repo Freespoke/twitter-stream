@@ -1,7 +1,7 @@
-module github.com/fallenstedt/twitter-stream/example
+module dev.freespoke.com/twitter-stream/example
 
-replace github.com/fallenstedt/twitter-stream => ../
+replace dev.freespoke.com/twitter-stream => ../
 
 go 1.16
 
-require github.com/fallenstedt/twitter-stream v0.3.3
+require dev.freespoke.com/twitter-stream v0.3.3

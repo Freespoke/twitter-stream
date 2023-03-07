@@ -1,9 +1,10 @@
 package stream
 
 import (
-	"github.com/fallenstedt/twitter-stream/httpclient"
 	"net/http"
 	"net/url"
+
+	"dev.freespoke.com/twitter-stream/httpclient"
 )
 
 type (

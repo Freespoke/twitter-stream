@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	twitterstream "github.com/fallenstedt/twitter-stream"
-	"github.com/fallenstedt/twitter-stream/rules"
+
+	twitterstream "dev.freespoke.com/twitter-stream"
+	"dev.freespoke.com/twitter-stream/rules"
 )
 
 func addRules() {
@@ -82,11 +83,10 @@ func deleteRules() {
 	fmt.Println("I have deleted rules ")
 }
 
-
 func printRules(data []rules.DataRule) {
 	for _, datum := range data {
 		fmt.Printf("Id: %v\n", datum.Id)
-		fmt.Printf("Tag: %v\n",datum.Tag)
+		fmt.Printf("Tag: %v\n", datum.Tag)
 		fmt.Printf("Value: %v\n\n", datum.Value)
 	}
 }

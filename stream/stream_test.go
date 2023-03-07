@@ -3,12 +3,13 @@ package stream
 import (
 	"bytes"
 	"fmt"
-	"github.com/fallenstedt/twitter-stream/httpclient"
 	"io"
 	"io/ioutil"
 	"net/http"
 	"net/url"
 	"testing"
+
+	"dev.freespoke.com/twitter-stream/httpclient"
 )
 
 func TestGetMessages(t *testing.T) {

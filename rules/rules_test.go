@@ -3,11 +3,12 @@ package rules
 import (
 	"bytes"
 	"fmt"
-	"github.com/fallenstedt/twitter-stream/httpclient"
 	"io/ioutil"
 	"net/http"
 	"net/url"
 	"testing"
+
+	"dev.freespoke.com/twitter-stream/httpclient"
 )
 
 func TestCreate(t *testing.T) {
@@ -22,8 +23,8 @@ func TestCreate(t *testing.T) {
 			func(queryParams *url.Values, bodyRequest string) (*http.Response, error) {
 				json := `{
 					"data": [{
-						"Value": "cat has:images", 
-						"Tag":"cat tweets with images", 
+						"Value": "cat has:images",
+						"Tag":"cat tweets with images",
 						"id": "123456"
 					}],
 					"meta": {
@@ -104,7 +105,6 @@ func TestCreate(t *testing.T) {
 	}
 }
 
-
 func TestDelete(t *testing.T) {
 
 	var tests = []struct {
@@ -117,8 +117,8 @@ func TestDelete(t *testing.T) {
 			func(queryParams *url.Values, bodyRequest string) (*http.Response, error) {
 				json := `{
 					"data": [{
-						"Value": "cat has:images", 
-						"Tag":"cat tweets with images", 
+						"Value": "cat has:images",
+						"Tag":"cat tweets with images",
 						"id": "123"
 					}],
 					"meta": {
@@ -199,7 +199,6 @@ func TestDelete(t *testing.T) {
 	}
 }
 
-
 func TestGetRules(t *testing.T) {
 	var tests = []struct {
 		mockRequest func() (*http.Response, error)
@@ -209,8 +208,8 @@ func TestGetRules(t *testing.T) {
 			func() (*http.Response, error) {
 				json := `{
 					"data": [{
-						"Value": "cat has:images", 
-						"Tag":"cat tweets with images", 
+						"Value": "cat has:images",
+						"Tag":"cat tweets with images",
 						"id": "123456"
 					}],
 					"meta": {

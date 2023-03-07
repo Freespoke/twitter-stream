@@ -3,10 +3,11 @@ package token_generator
 import (
 	"bytes"
 	"fmt"
-	"github.com/fallenstedt/twitter-stream/httpclient"
 	"io/ioutil"
 	"net/http"
 	"testing"
+
+	"dev.freespoke.com/twitter-stream/httpclient"
 )
 
 func TestSetApiKeyAndSecret(t *testing.T) {

@@ -2,10 +2,10 @@
 package twitterstream
 
 import (
-	"github.com/fallenstedt/twitter-stream/httpclient"
-	"github.com/fallenstedt/twitter-stream/rules"
-	"github.com/fallenstedt/twitter-stream/stream"
-	"github.com/fallenstedt/twitter-stream/token_generator"
+	"dev.freespoke.com/twitter-stream/httpclient"
+	"dev.freespoke.com/twitter-stream/rules"
+	"dev.freespoke.com/twitter-stream/stream"
+	"dev.freespoke.com/twitter-stream/token_generator"
 )
 
 type TwitterApi struct {
@@ -37,7 +37,6 @@ func NewRuleDelete(ids ...int) rules.DeleteRulesRequest {
 func NewStreamQueryParamsBuilder() stream.IStreamQueryParamsBuilder {
 	return stream.NewStreamQueryParamsBuilder()
 }
-
 
 // NewTwitterStream consumes a twitter Bearer token.
 // It is used to interact with Twitter's v2 filtered streaming API

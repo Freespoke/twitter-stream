@@ -2,8 +2,9 @@ package rules
 
 import (
 	"encoding/json"
-	"github.com/fallenstedt/twitter-stream/httpclient"
 	"net/url"
+
+	"dev.freespoke.com/twitter-stream/httpclient"
 )
 
 type (
@@ -53,10 +54,9 @@ type (
 	rules struct {
 		httpClient httpclient.IHttpClient
 	}
-
 )
 
-//NewRules creates a "rules" instance. This is used to create Twitter Filtered Stream rules.
+// NewRules creates a "rules" instance. This is used to create Twitter Filtered Stream rules.
 // https://developer.twitter.com/en/docs/twitter-api/tweets/filtered-stream/integrate/build-a-rule.
 func NewRules(httpClient httpclient.IHttpClient) IRules {
 	return &rules{httpClient: httpClient}
@@ -81,6 +81,7 @@ func (t *rules) Create(rules CreateRulesRequest, dryRun bool) (*TwitterRuleRespo
 	err = json.NewDecoder(res.Body).Decode(data)
 	return data, err
 }
+
 // Delete will delete rules twitter rules by their id.
 func (t *rules) Delete(req DeleteRulesRequest, dryRun bool) (*TwitterRuleResponse, error) {
 
@@ -103,7 +104,6 @@ func (t *rules) Delete(req DeleteRulesRequest, dryRun bool) (*TwitterRuleRespons
 	return data, err
 }
 
-
 // Get will fetch the current rules.
 func (t *rules) Get() (*TwitterRuleResponse, error) {
 	res, err := t.httpClient.GetRules()
@@ -118,8 +118,6 @@ func (t *rules) Get() (*TwitterRuleResponse, error) {
 
 	return data, nil
 }
-
-
 
 func (t *rules) addDryRun(dryRun bool) *url.Values {
 	if dryRun {

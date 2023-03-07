@@ -3,9 +3,10 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	twitterstream "github.com/fallenstedt/twitter-stream"
-	"github.com/fallenstedt/twitter-stream/stream"
 	"time"
+
+	twitterstream "dev.freespoke.com/twitter-stream"
+	"dev.freespoke.com/twitter-stream/stream"
 )
 
 // This example assumes you have atleast 1 twitter rule created.
